@@ -19,8 +19,8 @@ FilmKu adalah aplikasi web sederhana berbasis Python dan Streamlit. Aplikasi ini
 - **Cetak ke TXT**  
   Simpan seluruh data film ke dalam file teks yang dapat diunduh.
 
-- **Panduan Pengguna**  
-  Panduan singkat mengenai cara menggunakan aplikasi.
+- **Galeri Publik**  
+  Kamu bisa mengunggah list film mu ke internet! Kamu juga bisa melihat list pengguna lain.
 
 ## 🚀 Cara Menjalankan Aplikasi
 
@@ -58,8 +58,8 @@ FilmKu is a simple web-based app built with Python and Streamlit. It helps users
 - **Export to TXT**  
   Save all movie data into a downloadable text file.
 
-- **User Guide**  
-  A brief instruction page for new users.
+- **Public Gallery**  
+  You can upload your movie list to internet! You can also see other user's list.
 
 ## 🚀 How to Run the App
 
