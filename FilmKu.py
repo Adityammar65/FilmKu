@@ -11,7 +11,6 @@ class Film:
     def tampilkan(self):
         return f"{self.judul}\nGenre: {self.genre}\nTahun: {self.tahun}\nRating: {self.rating}/10"
 
-# List untuk menyimpan objek Film
 if 'film_list' not in st.session_state:
     st.session_state.film_list = []
 
@@ -39,6 +38,8 @@ def lihat_film():
             st.markdown(f"**{idx+1}. {film.judul}**")
             st.text(film.tampilkan())
             st.markdown("---")
+        if st.button("Cetak ke TXT"):
+            cetak_ke_txt()
 
 def edit_film():
     st.subheader("✏️ Edit Film")
@@ -76,6 +77,35 @@ def hapus_film():
         st.session_state.film_list.pop(idx)
         st.success(f"Film '{film.judul}' berhasil dihapus.")
 
+def panduan_pengguna():
+    st.subheader("📖 Panduan Pengguna")
+    st.markdown("""
+    **Selamat datang di Aplikasi FilmKu!** 🎬
+
+    Berikut adalah panduan singkat untuk menggunakan aplikasi ini:
+
+    - **Tambah Film**: Gunakan menu "Tambah Film" untuk menambahkan film baru.
+    - **Lihat Film**: Lihat semua film yang sudah ditambahkan. Anda juga bisa mencetak daftar ke file `.txt`.
+    - **Edit Film**: Ubah informasi film yang sudah ada.
+    - **Hapus Film**: Hapus film dari daftar.
+    - **Cetak Film**: Di halaman "Lihat Film", klik tombol `Cetak ke TXT` untuk menyimpan daftar film.
+
+    Semua data tersimpan selama sesi berlangsung (selama tab browser tidak ditutup atau di-refresh).
+    """)
+
+def cetak_ke_txt():
+    if not st.session_state.film_list:
+        st.warning("Tidak ada film untuk dicetak.")
+        return
+
+    with open("daftar_film.txt", "w", encoding="utf-8") as file:
+        for idx, film in enumerate(st.session_state.film_list, 1):
+            file.write(f"{idx}. {film.tampilkan()}\n\n")
+
+    st.success("Data film berhasil disimpan ke 'daftar_film.txt'.")
+    with open("daftar_film.txt", "r", encoding="utf-8") as f:
+        st.download_button("📄 Download File TXT", f, file_name="daftar_film.txt")
+
 def main():
     st.set_page_config(page_title="Aplikasi Film", page_icon="🎞️", layout="centered")
     st.title("🎞️ FilmKu")
@@ -83,8 +113,8 @@ def main():
     with st.sidebar:
         pilihan = option_menu(
             menu_title="Navigasi",
-            options=["Lihat Film", "Tambah Film", "Edit Film", "Hapus Film"],
-            icons=["tv", "plus-circle", "pencil-square", "trash"],
+            options=[ "Panduan","Lihat Film", "Tambah Film", "Edit Film", "Hapus Film"],
+            icons=["tv", "plus-circle", "pencil-square", "trash", "book"],
             menu_icon="film",
             default_index=0
         )
@@ -97,6 +127,9 @@ def main():
         edit_film()
     elif pilihan == "Hapus Film":
         hapus_film()
+    elif pilihan == "Panduan":
+        panduan_pengguna()
+
 
 if __name__ == "__main__":
     main()
