@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 from supabase import create_client, Client
 from collections import defaultdict
 
-SUPABASE_URL = "postgresql://postgres:[MazAditz01]@db.dzfglcoctmwiefoqnuge.supabase.co:5432/postgres"
+SUPABASE_URL = "https://dzfglcoctmwiefoqnuge.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR6ZmdsY29jdG13aWVmb3FudWdlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM0MzE5MTIsImV4cCI6MjA2OTAwNzkxMn0.NL2kqtyrnTuy3U8sH2lVKYIBu3eTl1gElOeaW0KhoDY"  # Ganti ini dengan anon key dari Supabase API
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
