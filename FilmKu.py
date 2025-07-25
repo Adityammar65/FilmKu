@@ -134,7 +134,7 @@ def upload_ke_galeri():
             data_final.append(film_dict)
 
         try:
-            supabase.table("FilmKu").insert(data_final).execute()
+            supabase.table("FilmKu_database").insert(data_final).execute()
             st.success("Berhasil mengunggah semua film ke galeri publik!")
             st.session_state.film_list.clear()
         except Exception as e:
@@ -144,7 +144,7 @@ def tampilkan_galeri():
     st.subheader("🌐 Galeri Film Publik")
 
     try:
-        response = supabase.table("FilmKu").select("*").execute()
+        response = supabase.table("FilmKu_database").select("*").execute()
         data = response.data
 
         if not data:
