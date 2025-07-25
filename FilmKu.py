@@ -107,7 +107,7 @@ def cetak_ke_txt():
         st.download_button("📄 Download File TXT", f, file_name="daftar_film.txt")
 
 def main():
-    st.set_page_config(page_title="Aplikasi Film", page_icon="🎞️", layout="centered")
+    st.set_page_config(page_title="FilmKu", page_icon="🎞️", layout="centered")
     st.title("🎞️ FilmKu")
 
     with st.sidebar:
