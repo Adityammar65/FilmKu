@@ -78,12 +78,14 @@ def edit_film():
     genre = st.text_input("Genre Baru", value=film.genre)
     tahun = st.number_input("Tahun Baru", min_value=1900, max_value=2100, value=film.tahun)
     rating = st.slider("Rating Baru", 1, 10, value=film.rating)
+    ulasan = st.text_area("Tulis Ulasan (opsional)")
 
     if st.button("Simpan Perubahan"):
         film.judul = judul
         film.genre = genre
         film.tahun = tahun
         film.rating = rating
+        film.ulasan = ulasan
         st.success("Data film berhasil diperbarui!")
 
 def hapus_film():
