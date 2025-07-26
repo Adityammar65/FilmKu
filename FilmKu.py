@@ -112,6 +112,7 @@ def panduan_pengguna():
     - **Edit Film**: Ubah informasi film yang sudah ada.
     - **Hapus Film**: Hapus film dari daftar.
     - **Cetak Film**: Di halaman "Lihat Film", klik tombol `Cetak ke TXT` untuk menyimpan daftar film.
+    - **Unggah Film Ke Galeri Publik**: Di halaman "Unggah Data", anda bisa mengunggah data film anda ke Galeri Publik, anda juga bisa melihat data film pengguna lain di Galeri Publik.
 
     Semua data tersimpan selama sesi berlangsung (selama tab browser tidak ditutup atau di-refresh).
     """)
@@ -158,9 +159,9 @@ def tampilkan_galeri():
 
         for user, daftar_film in user_to_films.items():
             st.markdown(f"## 👤 {user} ({len(daftar_film)} film)")
+            if "movie_collection" in film and film["movie_collection"]:
+                st.markdown(f"📦 Koleksi: *{film['movie_collection']}*")
             for idx, film in enumerate(daftar_film, 1):
-                if "movie_collection" in film and film["movie_collection"]:
-                    st.markdown(f"📦 Koleksi: *{film['movie_collection']}*")
                 st.markdown(f"**{idx}. {film['movie_title']}**")
                 st.write(f"🎭 Genre: {film['movie_genre']}")
                 st.write(f"📅 Tahun: {film['movie_productionYear']}")
