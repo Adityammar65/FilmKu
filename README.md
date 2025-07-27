@@ -30,7 +30,7 @@ Kamu bisa menjalankan aplikasi ini langsung secara online tanpa perlu mengunduh 
 
 Atau, jika ingin menjalankannya secara lokal:
 
-1. Pastikan Python, Streamlit, dan streamlit_option_menu sudah terpasang.
+1. Pastikan Python, Streamlit,Supabase dan streamlit_option_menu sudah terpasang.
 2. Jalankan perintah berikut di terminal:
 
 streamlit run FilmKu.py
@@ -69,7 +69,7 @@ You can run this app directly online without downloading or installing anything:
 
 Or, to run it locally:
 
-1. Make sure Python, Streamlit, and streamlit_option_menu are installed.
+1. Make sure Python, Streamlit,Supabase and streamlit_option_menu are installed.
 2. Run the following command in your terminal:
 
 streamlit run FilmKu.py
