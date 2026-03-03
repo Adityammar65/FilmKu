@@ -73,3 +73,8 @@ Or, to run it locally:
 2. Run the following command in your terminal:
 
 streamlit run FilmKu.py
+
+# Update - 3 Mar 2026
+
+(ID) Database telah di update!
+(EN) Database has been updated!
