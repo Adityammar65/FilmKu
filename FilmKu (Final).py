@@ -3,8 +3,8 @@ from streamlit_option_menu import option_menu
 from supabase import create_client, Client
 from collections import defaultdict
 
-SUPABASE_URL = "https://wpixblmdsdfqrkxfhnbj.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndwaXhibG1kc2RmcXJreGZobmJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0OTE1ODYsImV4cCI6MjA4ODA2NzU4Nn0.7hCi8V8lbFVk-eXYUEaqS5BNb1nxt4KuahRjAvcEs04"
+SUPABASE_URL = "ENTER_YOUR_SUPABASE_URL_HERE"
+SUPABASE_KEY = "ENTER_YOUR_KEY_HERE"
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 class Film:
