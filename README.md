@@ -24,11 +24,7 @@ FilmKu adalah aplikasi web sederhana berbasis Python dan Streamlit. Aplikasi ini
 
 ## 🚀 Cara Menjalankan Aplikasi
 
-Kamu bisa menjalankan aplikasi ini langsung secara online tanpa perlu mengunduh atau menginstal:
-
-🌐 **[Klik di sini untuk membuka aplikasi](https://adityammar65-filmku-filmkufinal-t1vf59.streamlit.app/)**
-
-Atau, jika ingin menjalankannya secara lokal:
+Jalankan secara lokal:
 
 1. Pastikan Python, Streamlit,Supabase dan streamlit_option_menu sudah terpasang.
 2. Jalankan perintah berikut di terminal:
@@ -63,11 +59,7 @@ FilmKu is a simple web-based app built with Python and Streamlit. It helps users
 
 ## 🚀 How to Run the App
 
-You can run this app directly online without downloading or installing anything:
-
-🌐 **[Click here to open the app](https://adityammar65-filmku-filmkufinal-t1vf59.streamlit.app/)**
-
-Or, to run it locally:
+Run it locally:
 
 1. Make sure Python, Streamlit,Supabase and streamlit_option_menu are installed.
 2. Run the following command in your terminal:
@@ -78,3 +70,8 @@ streamlit run FilmKu.py
 
 (ID) Database telah di update!
 (EN) Database has been updated!
+
+# Update - 17 Jun 2026
+
+(ID) Project ini sudah tidak dikembangkan
+(EN) This project is no longer maintained
